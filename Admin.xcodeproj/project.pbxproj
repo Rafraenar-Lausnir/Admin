@@ -18,6 +18,7 @@
 		853B13202C6D15A500D53F3B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 853B131F2C6D15A500D53F3B /* Preview Assets.xcassets */; };
 		859EFEFA2C6E5411000CCFC5 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 859EFEF92C6E5411000CCFC5 /* FirebaseAnalytics */; };
 		859EFEFC2C6E5411000CCFC5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 859EFEFB2C6E5411000CCFC5 /* FirebaseAuth */; };
+		85C08F4B2C6E792A00C09A04 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C08F4A2C6E792A00C09A04 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		853B131A2C6D15A400D53F3B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		853B131C2C6D15A500D53F3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		853B131F2C6D15A500D53F3B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		85C08F4A2C6E792A00C09A04 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				853B131C2C6D15A500D53F3B /* Assets.xcassets */,
 				850122512C6E61F400B46EB1 /* GoogleService-Info.plist */,
 				853B131E2C6D15A500D53F3B /* Preview Content */,
+				85C08F4A2C6E792A00C09A04 /* HomeView.swift */,
 			);
 			path = Admin;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			files = (
 				850122562C6E691F00B46EB1 /* ValidationManager.swift in Sources */,
 				8501224D2C6E575900B46EB1 /* FirebaseAuthManager.swift in Sources */,
+				85C08F4B2C6E792A00C09A04 /* HomeView.swift in Sources */,
 				853B131B2C6D15A400D53F3B /* ContentView.swift in Sources */,
 				850122502C6E604F00B46EB1 /* LoginView.swift in Sources */,
 				850122542C6E645F00B46EB1 /* LoginViewModel.swift in Sources */,

@@ -11,13 +11,20 @@ import FirebaseCore
 @main
 struct AdminApp: App {
 
+  @State private var isLoggedIn: Bool = false
+
   init() {
     FirebaseApp.configure()
   }
-
   var body: some Scene {
     WindowGroup {
-      ContentView()
+      if isLoggedIn {
+        HomeView()
+          .transition(.move(edge: .trailing))
+      } else {
+        ContentView()
+          .transition(.move(edge: .leading))
+      }
     }
   }
 }
