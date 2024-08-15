@@ -9,7 +9,17 @@ import SwiftUI
 
 struct HomeView: View {
   var body: some View {
-    Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    Button {
+      try? FirebaseAuthManager.shared.signOut()
+    } label: {
+      Text("Skrá út")
+        .padding()
+        .padding(.horizontal)
+        .foregroundStyle(Color("bg_color"))
+        .bold()
+        .background(Color("text_color"))
+        .clipShape(RoundedRectangle(cornerRadius: 10))
+    }
   }
 }
 
