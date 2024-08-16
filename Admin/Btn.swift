@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Button: View {
+struct Btn: View {
 
   var label: String
 
@@ -23,5 +23,5 @@ struct Button: View {
 }
 
 #Preview {
-  Button(label: "Skrá inn")
+  Btn(label: "Skrá inn")
 }

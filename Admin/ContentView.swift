@@ -29,7 +29,7 @@ struct ContentView: View {
         NavigationLink {
           LoginView(isLoggedIn: $isLoggedIn)
         } label: {
-          Button(label: "Skrá inn")
+          Btn(label: "Skrá inn")
         }
 
       }
