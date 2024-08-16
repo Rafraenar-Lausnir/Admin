@@ -1,13 +1,13 @@
 //
-//  HomeView.swift
+//  SettingsView.swift
 //  Admin
 //
-//  Created by Elín Ósk on 15.8.2024.
+//  Created by Elín Ósk on 16.8.2024.
 //
 
 import SwiftUI
 
-struct HomeView: View {
+struct SettingsView: View {
 
   @Binding var presentSideMenu: Bool
 
@@ -24,7 +24,7 @@ struct HomeView: View {
         Spacer()
       }
       Spacer()
-      Text("Home View")
+      Text("Settings View")
       Spacer()
     }
     .padding(.horizontal, 24)
@@ -32,5 +32,5 @@ struct HomeView: View {
 }
 
 #Preview {
-  HomeView(presentSideMenu: .constant(true))
+  SettingsView(presentSideMenu: .constant(false))
 }
