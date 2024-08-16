@@ -84,9 +84,11 @@ struct SideMenuView: View {
           ZStack {
             Image(imageName)
               .resizable()
-              .renderingMode(.template)
-              .foregroundStyle(isSelected ? Color.black : Color.gray)
+              .overlay(
+                isSelected ? Color.gray.opacity(0.3) : Color.black.opacity(0.3)
+              )
               .frame(width: 26, height: 26)
+              .clipShape(Circle())
           }
           .frame(width: 30, height: 30)
           Text(title)

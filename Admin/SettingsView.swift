@@ -24,7 +24,7 @@ struct SettingsView: View {
         Spacer()
       }
       Spacer()
-      Text("Home View")
+      Text("Settings View")
       Spacer()
     }
     .padding(.horizontal, 24)

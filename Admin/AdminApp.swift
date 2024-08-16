@@ -14,13 +14,7 @@ struct AdminApp: App {
 
   var body: some Scene {
     WindowGroup {
-      if isLoggedIn {
-        HomeView()
-          .transition(.move(edge: .trailing))
-      } else {
-        ContentView()
-          .transition(.move(edge: .leading))
-      }
+      MainTabbedView()
     }
   }
 }
