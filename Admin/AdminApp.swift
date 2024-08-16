@@ -6,12 +6,25 @@
 //
 
 import SwiftUI
+import FirebaseCore
 
 @main
 struct AdminApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+
+  @State private var isLoggedIn: Bool
+
+  init() {
+    FirebaseApp.configure()
+    self.isLoggedIn = FirebaseAuthManager.shared.fetchSignedInUser() != nil
+  }
+
+  var body: some Scene {
+    WindowGroup {
+      if isLoggedIn {
+        HomeView(isLoggedIn: $isLoggedIn)
+      } else {
+        ContentView(isLoggedIn: $isLoggedIn)
+      }
     }
+  }
 }

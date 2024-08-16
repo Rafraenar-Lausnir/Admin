@@ -1,0 +1,76 @@
+//
+//  LoginView.swift
+//  Admin
+//
+//  Created by Elín Ósk on 15.8.2024.
+//
+
+import SwiftUI
+
+struct LoginView: View {
+
+  @StateObject private var vm = LoginViewModel()
+  @Binding var isLoggedIn: Bool
+
+  var body: some View {
+    VStack {
+      Image("Logo_Icon")
+        .resizable()
+        .frame(width: 150, height: 150)
+      Text("Rafrænar Lausnir")
+        .font(.title)
+        .foregroundStyle(Color("text_color"))
+      Text("Rafrænt handa öllum!")
+        .font(.headline)
+        .foregroundStyle(Color("text_color"))
+
+      Spacer()
+      
+      TextField("Netfang", text: $vm.email)
+        .padding()
+        .background(Color("text_color"))
+        .foregroundStyle(Color("bg_color"))
+        .clipShape(RoundedRectangle(cornerRadius: 10))
+        .keyboardType(.emailAddress)
+        .textContentType(.emailAddress)
+        .textInputAutocapitalization(.never)
+      SecureField("Lykilorð", text: $vm.password)
+        .padding()
+        .background(Color("text_color"))
+        .foregroundStyle(Color("bg_color"))
+        .clipShape(RoundedRectangle(cornerRadius: 10))
+        .keyboardType(.default)
+        .textContentType(.password)
+        .textInputAutocapitalization(.never)
+
+      Spacer()
+
+      Button {
+        do {
+          try vm.login()
+          isLoggedIn = true
+        } catch let err {
+          print("Error logging in: \(err.localizedDescription)")
+        }
+      } label: {
+        Text("Skrá inn")
+          .padding()
+          .padding(.horizontal)
+          .foregroundStyle(Color("bg_color"))
+          .bold()
+          .background(Color("text_color"))
+          .clipShape(RoundedRectangle(cornerRadius: 10))
+      }
+
+    }
+    .padding()
+    .frame(maxWidth: .infinity, maxHeight: .infinity)
+    .background(
+      Color("bg_color")
+    )
+  }
+}
+
+#Preview {
+  LoginView(isLoggedIn: .constant(false))
+}

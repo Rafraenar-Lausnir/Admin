@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+
+  @Binding var isLoggedIn: Bool
+
   var body: some View {
     NavigationStack {
       VStack {
@@ -24,7 +27,7 @@ struct ContentView: View {
         Spacer()
 
         NavigationLink {
-          // Authentication screen
+          LoginView(isLoggedIn: $isLoggedIn)
         } label: {
           Button(label: "Skrá inn")
         }
@@ -40,5 +43,5 @@ struct ContentView: View {
 }
 
 #Preview {
-  ContentView()
+  ContentView(isLoggedIn: .constant(false))
 }
