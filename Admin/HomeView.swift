@@ -20,13 +20,7 @@ struct HomeView: View {
         print("Error logging out: \(err.localizedDescription)")
       }
     } label: {
-      Text("Skrá út")
-        .padding()
-        .padding(.horizontal)
-        .foregroundStyle(Color("bg_color"))
-        .bold()
-        .background(Color("text_color"))
-        .clipShape(RoundedRectangle(cornerRadius: 10))
+      Btn(label: "Skrá út")
     }
   }
 }
