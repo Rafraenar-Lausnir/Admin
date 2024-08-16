@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+
+  @Binding var isLoggedIn: Bool
+
   var body: some View {
     NavigationStack {
       VStack {
@@ -24,7 +27,7 @@ struct ContentView: View {
         Spacer()
 
         NavigationLink {
-          LoginView()
+          LoginView(isLoggedIn: $isLoggedIn)
         } label: {
           Text("Skrá inn")
             .padding()
@@ -46,5 +49,5 @@ struct ContentView: View {
 }
 
 #Preview {
-  ContentView()
+  ContentView(isLoggedIn: .constant(false))
 }

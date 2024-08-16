@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginView: View {
 
   @StateObject private var vm = LoginViewModel()
+  @Binding var isLoggedIn: Bool
 
   var body: some View {
     VStack {
@@ -30,16 +31,27 @@ struct LoginView: View {
         .background(Color("text_color"))
         .foregroundStyle(Color("bg_color"))
         .clipShape(RoundedRectangle(cornerRadius: 10))
+        .keyboardType(.emailAddress)
+        .textContentType(.emailAddress)
+        .textInputAutocapitalization(.never)
       SecureField("Lykilorð", text: $vm.password)
         .padding()
         .background(Color("text_color"))
         .foregroundStyle(Color("bg_color"))
         .clipShape(RoundedRectangle(cornerRadius: 10))
+        .keyboardType(.default)
+        .textContentType(.password)
+        .textInputAutocapitalization(.never)
 
       Spacer()
 
       Button {
-        vm.login()
+        do {
+          try vm.login()
+          isLoggedIn = true
+        } catch let err {
+          print("Error logging in: \(err.localizedDescription)")
+        }
       } label: {
         Text("Skrá inn")
           .padding()
@@ -60,5 +72,5 @@ struct LoginView: View {
 }
 
 #Preview {
-  LoginView()
+  LoginView(isLoggedIn: .constant(false))
 }

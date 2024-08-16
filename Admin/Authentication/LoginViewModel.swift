@@ -13,18 +13,14 @@ final class LoginViewModel: ObservableObject {
 
   private var validationManager = ValidationManager.shared
 
-  func login() {
+  func login() throws {
     Task {
-      do {
-        guard validationManager.validateEmail(self.email),
-              validationManager.validatePassword(self.password) else {
-          throw MachError(.invalidArgument)
-        }
-        try await FirebaseAuthManager.shared
-          .signIn(via: self.email, with: self.password)
-      } catch let err {
-        print("Error logging in: \(err.localizedDescription)")
+      guard validationManager.validateEmail(self.email),
+            validationManager.validatePassword(self.password) else {
+        throw MachError(.invalidArgument)
       }
+      try await FirebaseAuthManager.shared
+        .signIn(via: self.email, with: self.password)
     }
   }
 }

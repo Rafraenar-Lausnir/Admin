@@ -11,19 +11,19 @@ import FirebaseCore
 @main
 struct AdminApp: App {
 
-  @State private var isLoggedIn: Bool = false
+  @State private var isLoggedIn: Bool
 
   init() {
     FirebaseApp.configure()
+    self.isLoggedIn = FirebaseAuthManager.shared.fetchSignedInUser() != nil
   }
+
   var body: some Scene {
     WindowGroup {
       if isLoggedIn {
-        HomeView()
-          .transition(.move(edge: .trailing))
+        HomeView(isLoggedIn: $isLoggedIn)
       } else {
-        ContentView()
-          .transition(.move(edge: .leading))
+        ContentView(isLoggedIn: $isLoggedIn)
       }
     }
   }

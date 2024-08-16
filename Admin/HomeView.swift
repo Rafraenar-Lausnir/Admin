@@ -8,9 +8,17 @@
 import SwiftUI
 
 struct HomeView: View {
+
+  @Binding var isLoggedIn: Bool
+
   var body: some View {
     Button {
-      try? FirebaseAuthManager.shared.signOut()
+      do {
+        try FirebaseAuthManager.shared.signOut()
+        isLoggedIn = false
+      } catch let err {
+        print("Error logging out: \(err.localizedDescription)")
+      }
     } label: {
       Text("Skrá út")
         .padding()
@@ -24,5 +32,5 @@ struct HomeView: View {
 }
 
 #Preview {
-  HomeView()
+  HomeView(isLoggedIn: .constant(true))
 }
