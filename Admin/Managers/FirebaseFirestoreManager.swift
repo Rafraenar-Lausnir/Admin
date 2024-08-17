@@ -30,7 +30,6 @@ extension FirebaseFirestoreManager {
     do {
       try userDocument(user.uid).setData(from: user, merge: false)
     } catch let err {
-      print("Error storing user data: \(err)")
       throw err
     }
   }

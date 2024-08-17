@@ -36,7 +36,7 @@ final class FirebaseAuthManager {
     print("Fetched Database user: \(user.uid)")
 
     TmpStorage.shared.user = user
-    try FirebaseFirestoreManager.shared.createNewUser(for: Usr(authDataResult.user))
+//    try FirebaseFirestoreManager.shared.createNewUser(for: Usr(authDataResult.user))
   }
 
   func createUser(for email: String) async throws {
