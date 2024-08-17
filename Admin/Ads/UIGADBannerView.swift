@@ -9,7 +9,7 @@ import Foundation
 import GoogleMobileAds
 import UIKit
 
-class ViewController: UIViewController {
+class UIGADBannerView: UIViewController {
   var bannerView: GADBannerView!
 
   override func viewDidLoad() {
@@ -57,7 +57,7 @@ class ViewController: UIViewController {
 }
 
 // MARK: - GADBannerViewDelegate
-extension ViewController: GADBannerViewDelegate {
+extension UIGADBannerView: GADBannerViewDelegate {
   func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
     print("bannerViewDidReceiveAd")
     bannerView.alpha = 0
