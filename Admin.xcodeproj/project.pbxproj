@@ -29,6 +29,7 @@
 		85C08F532C6F4A3F00C09A04 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C08F522C6F4A3F00C09A04 /* SideMenu.swift */; };
 		85C08F552C6F4BCB00C09A04 /* SideMenuRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C08F542C6F4BCB00C09A04 /* SideMenuRowType.swift */; };
 		85C08F572C6F4ECE00C09A04 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C08F562C6F4ECE00C09A04 /* SideMenuView.swift */; };
+		85C08F4D2C6E9F1000C09A04 /* Btn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C08F4C2C6E9F1000C09A04 /* Btn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		85C08F522C6F4A3F00C09A04 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 		85C08F542C6F4BCB00C09A04 /* SideMenuRowType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuRowType.swift; sourceTree = "<group>"; };
 		85C08F562C6F4ECE00C09A04 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		85C08F4C2C6E9F1000C09A04 /* Btn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Btn.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				853B131C2C6D15A500D53F3B /* Assets.xcassets */,
 				850122512C6E61F400B46EB1 /* GoogleService-Info.plist */,
 				853B131E2C6D15A500D53F3B /* Preview Content */,
+				85C08F4C2C6E9F1000C09A04 /* Btn.swift */,
 				85C08F4A2C6E792A00C09A04 /* HomeView.swift */,
 				85C08F4E2C6F487C00C09A04 /* MainTabbedView.swift */,
 				85C08F502C6F48A800C09A04 /* SettingsView.swift */,
@@ -250,6 +253,7 @@
 				852AF2652C70B56500CAACFD /* TmpStorage.swift in Sources */,
 				852AF2602C70AA4F00CAACFD /* SettingsViewModel.swift in Sources */,
 				853B131B2C6D15A400D53F3B /* ContentView.swift in Sources */,
+				85C08F4D2C6E9F1000C09A04 /* Btn.swift in Sources */,
 				850122502C6E604F00B46EB1 /* LoginView.swift in Sources */,
 				850122542C6E645F00B46EB1 /* LoginViewModel.swift in Sources */,
 				853B13192C6D15A400D53F3B /* AdminApp.swift in Sources */,

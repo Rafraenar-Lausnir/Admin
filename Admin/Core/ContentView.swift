@@ -29,13 +29,7 @@ struct ContentView: View {
         NavigationLink {
           LoginView(isLoggedIn: $isLoggedIn)
         } label: {
-          Text("Skrá inn")
-            .padding()
-            .padding(.horizontal)
-            .foregroundStyle(Color("bg_color"))
-            .bold()
-            .background(Color("text_color"))
-            .clipShape(RoundedRectangle(cornerRadius: 10))
+          Btn(label: "Skrá inn")
         }
 
       }
