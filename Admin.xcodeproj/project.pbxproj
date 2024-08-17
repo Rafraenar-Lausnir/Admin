@@ -75,6 +75,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		852AF25C2C70A38900CAACFD /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				853B13182C6D15A400D53F3B /* AdminApp.swift */,
+				853B131A2C6D15A400D53F3B /* ContentView.swift */,
+				85C08F4A2C6E792A00C09A04 /* HomeView.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		853B130C2C6D15A400D53F3B = {
 			isa = PBXGroup;
 			children = (
@@ -95,14 +105,12 @@
 		853B13172C6D15A400D53F3B /* Admin */ = {
 			isa = PBXGroup;
 			children = (
+				852AF25C2C70A38900CAACFD /* Core */,
 				8501224E2C6E603D00B46EB1 /* Authentication */,
 				8501224B2C6E570B00B46EB1 /* Managers */,
-				853B13182C6D15A400D53F3B /* AdminApp.swift */,
-				853B131A2C6D15A400D53F3B /* ContentView.swift */,
 				853B131C2C6D15A500D53F3B /* Assets.xcassets */,
 				850122512C6E61F400B46EB1 /* GoogleService-Info.plist */,
 				853B131E2C6D15A500D53F3B /* Preview Content */,
-				85C08F4A2C6E792A00C09A04 /* HomeView.swift */,
 			);
 			path = Admin;
 			sourceTree = "<group>";
