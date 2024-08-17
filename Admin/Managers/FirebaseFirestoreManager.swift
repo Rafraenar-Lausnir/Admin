@@ -18,6 +18,10 @@ final class FirebaseFirestoreManager {
     db = Firestore.firestore()
     userCollection = db.collection("users")
   }
+
+  private func userDocument(_ userId: String) -> DocumentReference {
+    userCollection.document(userId)
+  }
 }
 
 // MARK: - User Management
@@ -34,11 +38,11 @@ extension FirebaseFirestoreManager {
     if let photoUrl = user.photoUrl {
       newUser["photo_url"] = photoUrl
     }
-    try await userCollection.document(user.uid).setData(newUser, merge: false)
+    try await userDocument(user.uid).setData(newUser, merge: false)
   }
 
   func fetchUser(for userId: String) async throws -> Usr {
-    let snapshot = try await userCollection.document(userId).getDocument()
+    let snapshot = try await userDocument(userId).getDocument()
 
     guard let data = snapshot.data(), let userId = data["user_id"] as? String else {
       throw URLError(.badServerResponse)
