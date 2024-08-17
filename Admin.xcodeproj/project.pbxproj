@@ -13,6 +13,7 @@
 		850122542C6E645F00B46EB1 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850122532C6E645F00B46EB1 /* LoginViewModel.swift */; };
 		850122562C6E691F00B46EB1 /* ValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850122552C6E691F00B46EB1 /* ValidationManager.swift */; };
 		852AF25A2C70A26500CAACFD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 852AF2592C70A26500CAACFD /* FirebaseFirestore */; };
+		852AF2602C70AA4F00CAACFD /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852AF25F2C70AA4F00CAACFD /* SettingsViewModel.swift */; };
 		853B13192C6D15A400D53F3B /* AdminApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853B13182C6D15A400D53F3B /* AdminApp.swift */; };
 		853B131B2C6D15A400D53F3B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853B131A2C6D15A400D53F3B /* ContentView.swift */; };
 		853B131D2C6D15A500D53F3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 853B131C2C6D15A500D53F3B /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 		850122512C6E61F400B46EB1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		850122532C6E645F00B46EB1 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		850122552C6E691F00B46EB1 /* ValidationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationManager.swift; sourceTree = "<group>"; };
+		852AF25F2C70AA4F00CAACFD /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		853B13152C6D15A400D53F3B /* Admin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Admin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		853B13182C6D15A400D53F3B /* AdminApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminApp.swift; sourceTree = "<group>"; };
 		853B131A2C6D15A400D53F3B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -90,7 +92,6 @@
 			children = (
 				853B13182C6D15A400D53F3B /* AdminApp.swift */,
 				853B131A2C6D15A400D53F3B /* ContentView.swift */,
-				85C08F4A2C6E792A00C09A04 /* HomeView.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -127,6 +128,7 @@
 				85C08F522C6F4A3F00C09A04 /* SideMenu.swift */,
 				85C08F542C6F4BCB00C09A04 /* SideMenuRowType.swift */,
 				85C08F562C6F4ECE00C09A04 /* SideMenuView.swift */,
+				852AF25F2C70AA4F00CAACFD /* SettingsViewModel.swift */,
 			);
 			path = Admin;
 			sourceTree = "<group>";
@@ -226,6 +228,7 @@
 				85C08F552C6F4BCB00C09A04 /* SideMenuRowType.swift in Sources */,
 				85C08F4F2C6F487C00C09A04 /* MainTabbedView.swift in Sources */,
 				85C08F532C6F4A3F00C09A04 /* SideMenu.swift in Sources */,
+				852AF2602C70AA4F00CAACFD /* SettingsViewModel.swift in Sources */,
 				853B131B2C6D15A400D53F3B /* ContentView.swift in Sources */,
 				850122502C6E604F00B46EB1 /* LoginView.swift in Sources */,
 				850122542C6E645F00B46EB1 /* LoginViewModel.swift in Sources */,

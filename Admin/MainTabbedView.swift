@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainTabbedView: View {
 
+  @Binding var isLoggedIn: Bool
   @State var presentSideMenu = false
   @State var selectedSideMenuTab = 0
 
@@ -17,7 +18,7 @@ struct MainTabbedView: View {
       TabView(selection: $selectedSideMenuTab) {
         HomeView(presentSideMenu: $presentSideMenu)
           .tag(0)
-        SettingsView(presentSideMenu: $presentSideMenu)
+        SettingsView(presentSideMenu: $presentSideMenu, isLoggedIn: $isLoggedIn)
           .tag(1)
       }
 
@@ -35,5 +36,5 @@ struct MainTabbedView: View {
 }
 
 #Preview {
-  MainTabbedView()
+  MainTabbedView(isLoggedIn: .constant(true))
 }

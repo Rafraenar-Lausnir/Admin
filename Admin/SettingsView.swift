@@ -9,7 +9,9 @@ import SwiftUI
 
 struct SettingsView: View {
 
+  @StateObject private var vm = SettingsViewModel()
   @Binding var presentSideMenu: Bool
+  @Binding var isLoggedIn: Bool
 
   var body: some View {
     VStack {
@@ -24,7 +26,23 @@ struct SettingsView: View {
         Spacer()
       }
       Spacer()
-      Text("Settings View")
+      Button {
+        do {
+          try vm.signout()
+          isLoggedIn = false
+        } catch let err {
+          print("Error logging out: \(err.localizedDescription)")
+        }
+      } label: {
+        Text("Skrá út")
+          .padding()
+          .padding(.horizontal)
+          .foregroundStyle(Color("bg_color"))
+          .bold()
+          .background(Color("text_color"))
+          .clipShape(RoundedRectangle(cornerRadius: 10))
+      }
+
       Spacer()
     }
     .padding(.horizontal, 24)
@@ -32,5 +50,5 @@ struct SettingsView: View {
 }
 
 #Preview {
-  SettingsView(presentSideMenu: .constant(false))
+  SettingsView(presentSideMenu: .constant(false), isLoggedIn: .constant(true))
 }

@@ -21,7 +21,7 @@ struct AdminApp: App {
   var body: some Scene {
     WindowGroup {
       if isLoggedIn {
-        HomeView(isLoggedIn: $isLoggedIn)
+        MainTabbedView(isLoggedIn: $isLoggedIn)
       } else {
         ContentView(isLoggedIn: $isLoggedIn)
       }
