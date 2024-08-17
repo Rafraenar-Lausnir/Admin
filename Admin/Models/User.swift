@@ -12,10 +12,22 @@ struct Usr {
   let uid: String
   let email: String?
   let photoUrl: String?
+  let dateCreated: Date?
+  let dateUpdated: Date?
 
   init(_ user: User) {
     self.uid = user.uid
     self.email = user.email
     self.photoUrl = user.photoURL?.absoluteString
+    self.dateCreated = nil
+    self.dateUpdated = nil
+  }
+
+  init(id: String, email: String?, photoUrl: String?, dateCreated: Date?, dateUpdated: Date?) {
+    self.uid = id
+    self.email = email
+    self.photoUrl = photoUrl
+    self.dateCreated = dateCreated
+    self.dateUpdated = dateUpdated
   }
 }

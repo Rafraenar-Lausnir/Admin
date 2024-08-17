@@ -27,6 +27,24 @@ struct SettingsView: View {
       }
       Spacer()
       Button {
+        Task {
+          do {
+            try await FirebaseAuthManager.shared
+              .createUser(for: "testing@testing.com")
+          } catch let err {
+            print("Error logging out: \(err.localizedDescription)")
+          }
+        }
+      } label: {
+        Text("Búa til lykilorð")
+          .padding()
+          .padding(.horizontal)
+          .foregroundStyle(Color("bg_color"))
+          .bold()
+          .background(Color("text_color"))
+          .clipShape(RoundedRectangle(cornerRadius: 10))
+      }
+      Button {
         do {
           try vm.signout()
           isLoggedIn = false

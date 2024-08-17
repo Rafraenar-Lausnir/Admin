@@ -31,4 +31,26 @@ extension FirebaseFirestoreManager {
     }
     try await db.collection("users").document(user.uid).setData(newUser, merge: false)
   }
+
+  func fetchUser(for userId: String) async throws -> Usr {
+    let snapshot = try await db.collection("users").document(userId).getDocument()
+
+    guard let data = snapshot.data(), let userId = data["user_id"] as? String else {
+      throw URLError(.badServerResponse)
+    }
+
+    let email = data["email"] as? String
+    let photoUrl = data["photo_url"] as? String
+    let dateCreated = data["date_created"] as? Date
+    let dateUpdated = data["date_updated"] as? Date
+
+    let user = Usr(
+      id: userId,
+      email: email,
+      photoUrl: photoUrl,
+      dateCreated: dateCreated,
+      dateUpdated: dateUpdated
+    )
+    return user
+  }
 }

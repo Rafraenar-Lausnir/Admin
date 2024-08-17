@@ -46,11 +46,13 @@ struct LoginView: View {
       Spacer()
 
       Button {
-        do {
-          try vm.login()
-          isLoggedIn = true
-        } catch let err {
-          print("Error logging in: \(err.localizedDescription)")
+        Task {
+          do {
+            try await vm.login()
+            isLoggedIn = true
+          } catch let err {
+            print("Error logging in: \(err.localizedDescription)")
+          }
         }
       } label: {
         Text("Skrá inn")
