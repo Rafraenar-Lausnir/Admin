@@ -51,7 +51,8 @@ struct LoginView: View {
             try await vm.login()
             isLoggedIn = true
           } catch let err {
-            print("Error logging in: \(err.localizedDescription)")
+            print("Error logging in: \(err)")
+            try? FirebaseAuthManager.shared.signOut()
           }
         }
       } label: {

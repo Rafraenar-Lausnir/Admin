@@ -8,7 +8,7 @@
 import Foundation
 import FirebaseAuth
 
-struct Usr {
+struct Usr: Codable {
   let uid: String
   let email: String?
   let photoUrl: String?
@@ -19,8 +19,8 @@ struct Usr {
     self.uid = user.uid
     self.email = user.email
     self.photoUrl = user.photoURL?.absoluteString
-    self.dateCreated = nil
-    self.dateUpdated = nil
+    self.dateCreated = Date()
+    self.dateUpdated = Date()
   }
 
   init(id: String, email: String?, photoUrl: String?, dateCreated: Date?, dateUpdated: Date?) {
