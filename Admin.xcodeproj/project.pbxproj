@@ -12,6 +12,7 @@
 		850122522C6E61F400B46EB1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 850122512C6E61F400B46EB1 /* GoogleService-Info.plist */; };
 		850122542C6E645F00B46EB1 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850122532C6E645F00B46EB1 /* LoginViewModel.swift */; };
 		850122562C6E691F00B46EB1 /* ValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850122552C6E691F00B46EB1 /* ValidationManager.swift */; };
+		852AF25A2C70A26500CAACFD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 852AF2592C70A26500CAACFD /* FirebaseFirestore */; };
 		853B13192C6D15A400D53F3B /* AdminApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853B13182C6D15A400D53F3B /* AdminApp.swift */; };
 		853B131B2C6D15A400D53F3B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853B131A2C6D15A400D53F3B /* ContentView.swift */; };
 		853B131D2C6D15A500D53F3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 853B131C2C6D15A500D53F3B /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 			files = (
 				859EFEFA2C6E5411000CCFC5 /* FirebaseAnalytics in Frameworks */,
 				859EFEFC2C6E5411000CCFC5 /* FirebaseAuth in Frameworks */,
+				852AF25A2C70A26500CAACFD /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,11 +68,19 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
+		852AF2582C70A26500CAACFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		853B130C2C6D15A400D53F3B = {
 			isa = PBXGroup;
 			children = (
 				853B13172C6D15A400D53F3B /* Admin */,
 				853B13162C6D15A400D53F3B /* Products */,
+				852AF2582C70A26500CAACFD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +134,7 @@
 			packageProductDependencies = (
 				859EFEF92C6E5411000CCFC5 /* FirebaseAnalytics */,
 				859EFEFB2C6E5411000CCFC5 /* FirebaseAuth */,
+				852AF2592C70A26500CAACFD /* FirebaseFirestore */,
 			);
 			productName = Admin;
 			productReference = 853B13152C6D15A400D53F3B /* Admin.app */;
@@ -408,6 +419,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		852AF2592C70A26500CAACFD /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 859EFEF82C6E5411000CCFC5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
 		859EFEF92C6E5411000CCFC5 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 859EFEF82C6E5411000CCFC5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
