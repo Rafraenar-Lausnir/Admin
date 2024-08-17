@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseCore
+import GoogleMobileAds
 
 @main
 struct AdminApp: App {
@@ -15,6 +16,8 @@ struct AdminApp: App {
 
   init() {
     FirebaseApp.configure()
+    GADMobileAds.sharedInstance().start()
+
     let user = FirebaseAuthManager.shared.fetchSignedInUser()
     if let user = user {
       TmpStorage.shared.user = Usr(user)
