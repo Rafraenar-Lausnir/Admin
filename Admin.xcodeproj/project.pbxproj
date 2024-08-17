@@ -14,6 +14,9 @@
 		850122562C6E691F00B46EB1 /* ValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850122552C6E691F00B46EB1 /* ValidationManager.swift */; };
 		852AF25A2C70A26500CAACFD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 852AF2592C70A26500CAACFD /* FirebaseFirestore */; };
 		852AF2602C70AA4F00CAACFD /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852AF25F2C70AA4F00CAACFD /* SettingsViewModel.swift */; };
+		852AF2632C70AD8B00CAACFD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852AF2622C70AD8B00CAACFD /* User.swift */; };
+		852AF2652C70B56500CAACFD /* TmpStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852AF2642C70B56500CAACFD /* TmpStorage.swift */; };
+		852AF2672C70B71700CAACFD /* FirebaseFirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852AF2662C70B71700CAACFD /* FirebaseFirestoreManager.swift */; };
 		853B13192C6D15A400D53F3B /* AdminApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853B13182C6D15A400D53F3B /* AdminApp.swift */; };
 		853B131B2C6D15A400D53F3B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853B131A2C6D15A400D53F3B /* ContentView.swift */; };
 		853B131D2C6D15A500D53F3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 853B131C2C6D15A500D53F3B /* Assets.xcassets */; };
@@ -35,6 +38,9 @@
 		850122532C6E645F00B46EB1 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		850122552C6E691F00B46EB1 /* ValidationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationManager.swift; sourceTree = "<group>"; };
 		852AF25F2C70AA4F00CAACFD /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		852AF2622C70AD8B00CAACFD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		852AF2642C70B56500CAACFD /* TmpStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TmpStorage.swift; sourceTree = "<group>"; };
+		852AF2662C70B71700CAACFD /* FirebaseFirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFirestoreManager.swift; sourceTree = "<group>"; };
 		853B13152C6D15A400D53F3B /* Admin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Admin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		853B13182C6D15A400D53F3B /* AdminApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminApp.swift; sourceTree = "<group>"; };
 		853B131A2C6D15A400D53F3B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,6 +73,8 @@
 			children = (
 				8501224C2C6E575900B46EB1 /* FirebaseAuthManager.swift */,
 				850122552C6E691F00B46EB1 /* ValidationManager.swift */,
+				852AF2642C70B56500CAACFD /* TmpStorage.swift */,
+				852AF2662C70B71700CAACFD /* FirebaseFirestoreManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -96,6 +104,14 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		852AF2612C70AD7B00CAACFD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				852AF2622C70AD8B00CAACFD /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		853B130C2C6D15A400D53F3B = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +132,7 @@
 		853B13172C6D15A400D53F3B /* Admin */ = {
 			isa = PBXGroup;
 			children = (
+				852AF2612C70AD7B00CAACFD /* Models */,
 				852AF25C2C70A38900CAACFD /* Core */,
 				8501224E2C6E603D00B46EB1 /* Authentication */,
 				8501224B2C6E570B00B46EB1 /* Managers */,
@@ -226,8 +243,11 @@
 				85C08F4B2C6E792A00C09A04 /* HomeView.swift in Sources */,
 				85C08F572C6F4ECE00C09A04 /* SideMenuView.swift in Sources */,
 				85C08F552C6F4BCB00C09A04 /* SideMenuRowType.swift in Sources */,
+				852AF2632C70AD8B00CAACFD /* User.swift in Sources */,
 				85C08F4F2C6F487C00C09A04 /* MainTabbedView.swift in Sources */,
+				852AF2672C70B71700CAACFD /* FirebaseFirestoreManager.swift in Sources */,
 				85C08F532C6F4A3F00C09A04 /* SideMenu.swift in Sources */,
+				852AF2652C70B56500CAACFD /* TmpStorage.swift in Sources */,
 				852AF2602C70AA4F00CAACFD /* SettingsViewModel.swift in Sources */,
 				853B131B2C6D15A400D53F3B /* ContentView.swift in Sources */,
 				850122502C6E604F00B46EB1 /* LoginView.swift in Sources */,

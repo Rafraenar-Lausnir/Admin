@@ -15,7 +15,11 @@ struct AdminApp: App {
 
   init() {
     FirebaseApp.configure()
-    self.isLoggedIn = FirebaseAuthManager.shared.fetchSignedInUser() != nil
+    let user = FirebaseAuthManager.shared.fetchSignedInUser()
+    if let user = user {
+      TmpStorage.shared.user = Usr(user)
+    }
+    self.isLoggedIn = user != nil
   }
 
   var body: some Scene {

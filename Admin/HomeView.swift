@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
 
   @Binding var presentSideMenu: Bool
+  let user = TmpStorage.shared.user
 
   var body: some View {
     VStack {
@@ -24,7 +25,11 @@ struct HomeView: View {
         Spacer()
       }
       Spacer()
-      Text("Home View")
+      List {
+        if let user = user {
+          Text("Signed in user: \(user.uid)")
+        }
+      }
       Spacer()
     }
     .padding(.horizontal, 24)

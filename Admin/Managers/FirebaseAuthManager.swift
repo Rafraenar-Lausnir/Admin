@@ -29,6 +29,9 @@ final class FirebaseAuthManager {
 
   func signIn(via email: String, with password: String) async throws {
     let authDataResult = try await auth.signIn(withEmail: email, password: password)
+
+    try await FirebaseFirestoreManager.shared
+      .createNewUser(for: Usr(authDataResult.user))
   }
 
   func reauthenticateUser(via email: String, with password: String) async throws -> AuthCredential {
