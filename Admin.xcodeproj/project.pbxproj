@@ -23,13 +23,13 @@
 		853B13202C6D15A500D53F3B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 853B131F2C6D15A500D53F3B /* Preview Assets.xcassets */; };
 		859EFEFA2C6E5411000CCFC5 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 859EFEF92C6E5411000CCFC5 /* FirebaseAnalytics */; };
 		859EFEFC2C6E5411000CCFC5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 859EFEFB2C6E5411000CCFC5 /* FirebaseAuth */; };
-		85C08F4B2C6E792A00C09A04 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C08F4A2C6E792A00C09A04 /* HomeView.swift */; };
+		85C08F4B2C6E792A00C09A04 /* HomeView 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C08F4A2C6E792A00C09A04 /* HomeView 2.swift */; };
+		85C08F4D2C6E9F1000C09A04 /* Btn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C08F4C2C6E9F1000C09A04 /* Btn.swift */; };
 		85C08F4F2C6F487C00C09A04 /* MainTabbedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C08F4E2C6F487C00C09A04 /* MainTabbedView.swift */; };
 		85C08F512C6F48A800C09A04 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C08F502C6F48A800C09A04 /* SettingsView.swift */; };
 		85C08F532C6F4A3F00C09A04 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C08F522C6F4A3F00C09A04 /* SideMenu.swift */; };
 		85C08F552C6F4BCB00C09A04 /* SideMenuRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C08F542C6F4BCB00C09A04 /* SideMenuRowType.swift */; };
 		85C08F572C6F4ECE00C09A04 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C08F562C6F4ECE00C09A04 /* SideMenuView.swift */; };
-		85C08F4D2C6E9F1000C09A04 /* Btn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C08F4C2C6E9F1000C09A04 /* Btn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,13 +47,13 @@
 		853B131A2C6D15A400D53F3B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		853B131C2C6D15A500D53F3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		853B131F2C6D15A500D53F3B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		85C08F4A2C6E792A00C09A04 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		85C08F4A2C6E792A00C09A04 /* HomeView 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeView 2.swift"; sourceTree = "<group>"; };
+		85C08F4C2C6E9F1000C09A04 /* Btn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Btn.swift; sourceTree = "<group>"; };
 		85C08F4E2C6F487C00C09A04 /* MainTabbedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbedView.swift; sourceTree = "<group>"; };
 		85C08F502C6F48A800C09A04 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		85C08F522C6F4A3F00C09A04 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 		85C08F542C6F4BCB00C09A04 /* SideMenuRowType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuRowType.swift; sourceTree = "<group>"; };
 		85C08F562C6F4ECE00C09A04 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
-		85C08F4C2C6E9F1000C09A04 /* Btn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Btn.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +100,9 @@
 		852AF25C2C70A38900CAACFD /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				85C08F4A2C6E792A00C09A04 /* HomeView 2.swift */,
+				85C08F502C6F48A800C09A04 /* SettingsView.swift */,
+				852AF25F2C70AA4F00CAACFD /* SettingsViewModel.swift */,
 				853B13182C6D15A400D53F3B /* AdminApp.swift */,
 				853B131A2C6D15A400D53F3B /* ContentView.swift */,
 			);
@@ -112,6 +115,33 @@
 				852AF2622C70AD8B00CAACFD /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		852AF2682C70D59100CAACFD /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				852AF2692C70D59C00CAACFD /* Components */,
+				85C08F4E2C6F487C00C09A04 /* MainTabbedView.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		852AF2692C70D59C00CAACFD /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				85C08F522C6F4A3F00C09A04 /* SideMenu.swift */,
+				85C08F542C6F4BCB00C09A04 /* SideMenuRowType.swift */,
+				85C08F562C6F4ECE00C09A04 /* SideMenuView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		852AF26A2C70D5C100CAACFD /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				85C08F4C2C6E9F1000C09A04 /* Btn.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		853B130C2C6D15A400D53F3B = {
@@ -134,6 +164,8 @@
 		853B13172C6D15A400D53F3B /* Admin */ = {
 			isa = PBXGroup;
 			children = (
+				852AF26A2C70D5C100CAACFD /* Components */,
+				852AF2682C70D59100CAACFD /* Menu */,
 				852AF2612C70AD7B00CAACFD /* Models */,
 				852AF25C2C70A38900CAACFD /* Core */,
 				8501224E2C6E603D00B46EB1 /* Authentication */,
@@ -141,14 +173,6 @@
 				853B131C2C6D15A500D53F3B /* Assets.xcassets */,
 				850122512C6E61F400B46EB1 /* GoogleService-Info.plist */,
 				853B131E2C6D15A500D53F3B /* Preview Content */,
-				85C08F4C2C6E9F1000C09A04 /* Btn.swift */,
-				85C08F4A2C6E792A00C09A04 /* HomeView.swift */,
-				85C08F4E2C6F487C00C09A04 /* MainTabbedView.swift */,
-				85C08F502C6F48A800C09A04 /* SettingsView.swift */,
-				85C08F522C6F4A3F00C09A04 /* SideMenu.swift */,
-				85C08F542C6F4BCB00C09A04 /* SideMenuRowType.swift */,
-				85C08F562C6F4ECE00C09A04 /* SideMenuView.swift */,
-				852AF25F2C70AA4F00CAACFD /* SettingsViewModel.swift */,
 			);
 			path = Admin;
 			sourceTree = "<group>";
@@ -243,7 +267,7 @@
 				850122562C6E691F00B46EB1 /* ValidationManager.swift in Sources */,
 				8501224D2C6E575900B46EB1 /* FirebaseAuthManager.swift in Sources */,
 				85C08F512C6F48A800C09A04 /* SettingsView.swift in Sources */,
-				85C08F4B2C6E792A00C09A04 /* HomeView.swift in Sources */,
+				85C08F4B2C6E792A00C09A04 /* HomeView 2.swift in Sources */,
 				85C08F572C6F4ECE00C09A04 /* SideMenuView.swift in Sources */,
 				85C08F552C6F4BCB00C09A04 /* SideMenuRowType.swift in Sources */,
 				852AF2632C70AD8B00CAACFD /* User.swift in Sources */,

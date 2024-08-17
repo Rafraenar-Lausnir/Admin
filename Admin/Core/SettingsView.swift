@@ -36,13 +36,7 @@ struct SettingsView: View {
           }
         }
       } label: {
-        Text("Búa til lykilorð")
-          .padding()
-          .padding(.horizontal)
-          .foregroundStyle(Color("bg_color"))
-          .bold()
-          .background(Color("text_color"))
-          .clipShape(RoundedRectangle(cornerRadius: 10))
+        Btn(label: "Búa til lykilorð")
       }
       Button {
         do {
@@ -52,13 +46,7 @@ struct SettingsView: View {
           print("Error logging out: \(err.localizedDescription)")
         }
       } label: {
-        Text("Skrá út")
-          .padding()
-          .padding(.horizontal)
-          .foregroundStyle(Color("bg_color"))
-          .bold()
-          .background(Color("text_color"))
-          .clipShape(RoundedRectangle(cornerRadius: 10))
+        Btn(label: "Skrá út")
       }
 
       Spacer()
