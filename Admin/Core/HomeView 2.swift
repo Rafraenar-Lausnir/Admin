@@ -25,6 +25,7 @@ struct HomeView: View {
         Spacer()
       }
       Spacer()
+      RepresentableGADBannerView()
       List {
         if let user = user {
           Text("Signed in user: \(user.uid)")

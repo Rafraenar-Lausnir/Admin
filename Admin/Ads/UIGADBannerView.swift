@@ -6,8 +6,26 @@
 //
 
 import Foundation
-import GoogleMobileAds
+import SwiftUI
 import UIKit
+import GoogleMobileAds
+
+struct RepresentableGADBannerView: UIViewControllerRepresentable {
+  typealias UIViewControllerType = UIGADBannerView
+
+  func makeUIViewController(context: Context) -> UIGADBannerView {
+    let vc = UIGADBannerView()
+    return vc
+  }
+
+  func updateUIViewController(
+    _ uiViewController: UIGADBannerView,
+    context: Context
+  ) {
+    // Something here in the need case of updating the view after loading
+  }
+
+}
 
 class UIGADBannerView: UIViewController {
   var bannerView: GADBannerView!
@@ -22,9 +40,7 @@ class UIGADBannerView: UIViewController {
     )
     bannerView = GADBannerView(adSize: adaptiveSize)
 
-    addBannerViewToView(bannerView)
-
-    bannerView.adUnitID = "ca-app-pub-3940256099942544/2435281174"
+    bannerView.adUnitID = "ca-app-pub-3912161435059324/8404665941"
     bannerView.rootViewController = self
 
     bannerView.load(GADRequest())
@@ -64,6 +80,8 @@ extension UIGADBannerView: GADBannerViewDelegate {
     UIView.animate(withDuration: 1) {
       bannerView.alpha = 1
     }
+
+    addBannerViewToView(bannerView)
   }
 
   func bannerView(
