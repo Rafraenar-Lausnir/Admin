@@ -46,20 +46,17 @@ struct LoginView: View {
       Spacer()
 
       Button {
-        do {
-          try vm.login()
-          isLoggedIn = true
-        } catch let err {
-          print("Error logging in: \(err.localizedDescription)")
+        Task {
+          do {
+            try await vm.login()
+            isLoggedIn = true
+          } catch let err {
+            print("Error logging in: \(err)")
+            try? FirebaseAuthManager.shared.signOut()
+          }
         }
       } label: {
-        Text("Skrá inn")
-          .padding()
-          .padding(.horizontal)
-          .foregroundStyle(Color("bg_color"))
-          .bold()
-          .background(Color("text_color"))
-          .clipShape(RoundedRectangle(cornerRadius: 10))
+        Btn(label: "Skrá inn")
       }
 
     }

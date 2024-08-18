@@ -29,6 +29,33 @@ final class FirebaseAuthManager {
 
   func signIn(via email: String, with password: String) async throws {
     let authDataResult = try await auth.signIn(withEmail: email, password: password)
+
+    let user = try await FirebaseFirestoreManager.shared
+      .fetchUser(for: authDataResult.user.uid)
+
+    print("Fetched Database user: \(user.uid)")
+
+    TmpStorage.shared.user = user
+//    try FirebaseFirestoreManager.shared.createNewUser(for: Usr(authDataResult.user))
+  }
+
+  func createUser(for email: String) async throws {
+    var randPassword: String = ""
+
+    let passChar = Array("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890")
+    for _ in 0..<8 {
+        // generate a random index based on your array of characters count
+      let rand = arc4random_uniform(UInt32(passChar.count))
+        // append the random character to your string
+      randPassword.append(passChar[Int(rand)])
+    }
+
+    let authDataResult = try await auth.createUser(
+      withEmail: email,
+      password: randPassword
+    )
+
+//    try FirebaseFirestoreManager.shared.createNewUser(for: Usr(authDataResult.user))
   }
 
   func reauthenticateUser(via email: String, with password: String) async throws -> AuthCredential {
@@ -45,6 +72,7 @@ final class FirebaseAuthManager {
 
   func signOut() throws {
     try auth.signOut()
+    TmpStorage.shared.user = nil
   }
 
   func resetPassword(_ credential: AuthCredential, to newPassword: String) async throws {

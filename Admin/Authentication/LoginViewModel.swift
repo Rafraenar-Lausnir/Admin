@@ -13,14 +13,12 @@ final class LoginViewModel: ObservableObject {
 
   private var validationManager = ValidationManager.shared
 
-  func login() throws {
-    Task {
-      guard validationManager.validateEmail(self.email),
-            validationManager.validatePassword(self.password) else {
-        throw MachError(.invalidArgument)
-      }
-      try await FirebaseAuthManager.shared
-        .signIn(via: self.email, with: self.password)
+  func login() async throws {
+    guard validationManager.validateEmail(self.email),
+          validationManager.validatePassword(self.password) else {
+      throw MachError(.invalidArgument)
     }
+    try await FirebaseAuthManager.shared
+      .signIn(via: self.email, with: self.password)
   }
 }
